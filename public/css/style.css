@@ -1,0 +1,243 @@
+body{
+    background-color: rgba(236,239,243,255);
+    padding: 10px 10px;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.all {
+    overflow: hidden;
+    /* padding: 20px 20px; */
+    z-index: 1;
+    height: 100%;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0px 4px 8px rgba(209, 217, 227, 0.4);
+
+}
+header{
+    width: 85%;
+    background-color: white;
+    
+    height: 75px;
+    border-top-right-radius: 20px;
+    right: 0;
+    position: absolute;
+}
+header .profile{
+    gap: 10px;
+}
+.search i{
+    position: relative;
+    right: -30px;
+}
+.search input{
+    width: 350px;
+    outline: none;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f5ff;
+}
+header .profile .img img{
+    width: 100%;
+    border-radius: 50%;
+
+}
+header .profile .img {
+    width: 50px;
+    height: 50px;
+}
+aside {
+    box-shadow: 0px 4px 8px rgba(209, 217, 227, 0.4);
+    height: calc(100% - 20px);
+    width: 14.8%;
+    padding: 15px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: fixed;
+    background-color: white;
+}
+.scroll-section{
+    position: absolute;
+    /* display:flex; */
+    /* flex-direction: column; */
+    /* justify-content:space-between; */
+    top: 75px;
+    left: 15%;
+    width: 70%;
+    padding: 20px 20px;
+    height:calc(100% - 75px);
+    transition: 0.4s;
+    background-color: rgba(236,239,243,255);
+}
+.scroll-section {
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+    scrollbar-width: thin; /* Narrow scrollbar for Firefox */
+    scrollbar-color: rgba(100, 100, 100, 0.5) rgba(236, 239, 243, 0.8); /* Custom color for scrollbar */
+}
+/* For Chrome, Edge, Safari */
+.scroll-section::-webkit-scrollbar {
+    width: 8px; /* Set scrollbar width */
+}
+
+.scroll-section::-webkit-scrollbar-thumb {
+    background-color: rgba(100, 100, 100, 0.5); /* Scrollbar thumb color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.scroll-section::-webkit-scrollbar-track {
+    background-color: rgba(236, 239, 243, 0.8); 
+    /* Scrollbar track color */
+}
+.scroll-section .row:not(:last-of-type){
+    margin-bottom: 15px;
+
+}
+
+.scroll-section .row{
+    /* width: 100%; */
+    /* height:48.5%; */
+    padding: 15px 0 ;
+    background-color: white;
+    border-radius: 10px;
+}
+.scroll-section .row .col-3 .content .title{
+    text-transform: capitalize;
+    font-weight: bold;
+
+}
+.scroll-section .row .col-3 .card {
+    transition: 0.3s;
+}
+.scroll-section .row .col-3 .card:hover {
+    /* transform: scale(1.1); */
+    box-shadow: 0px 2px 5px rgba(209, 217, 227);
+
+}
+.scroll-section .row .col-3 .content{
+    text-align: center;
+    padding: 20px 10px;
+}
+.scroll-section .row img{
+    border-radius: 5px 5px 0 0;
+}
+.scroll-section.toggle{
+    width: 85%;
+}
+.book-side.toggle{
+    right: -15%;
+    z-index: -1;
+}
+.book-side{
+    position: relative;
+    height: calc(100% - 20px - 75px);
+    border-bottom-right-radius: 20px ;
+    /* padding: 10px 20px; */
+    width: 14.8%;
+    position: fixed;
+    transition: 0.5s;
+    top: 85px;
+    right: 10px;
+    box-shadow: 0px 2px 8px rgba(209, 217, 227, 0.4);
+    padding: 40px 20px;
+    background-color: #001643;
+}
+.cansel{
+    position: absolute;
+    width: 20px;
+    top: 10px;
+    left: calc(100% - 30px);
+    height: 20px;
+    /* background-color: red; */
+}
+.cansel i{
+    color: white;
+    cursor: pointer;
+}
+.nav {
+    display: flex;
+    gap: 15px;
+}
+.nav li a .img.active i{
+    color: white;
+
+}
+.nav li a .img.active{
+    
+    background-color: blue;
+
+}
+.nav li a {
+    color: rgba(104,114,134,255);
+    
+}
+.nav li a .img{
+    background-color: rgba(242,242,245,255);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7.5px;
+}
+.nav li a .text.active{
+    font-weight: bold;
+    color: black;
+}
+.nav li a img {
+    width: 75%;
+}
+img {
+    width: 100%;
+}
+.nav li a{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.book-side .container-fluid {
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+}
+.book-side .container-fluid .row .col-12{
+    color: rgba(83,107,156,255);
+}
+.book-side .container-fluid .row .col-12 img {
+    width: 100%;
+    
+}
+.par {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 12px;
+}
+.book-side .container-fluid .row .col-12 .autor {
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    
+}
+.book-side .container-fluid .row .col-12 .title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    text-transform: capitalize;
+    font-weight: bold;
+    text-align: center;
+}
+.book-side .container-fluid .row .col-12 button {
+    text-transform: capitalize;
+    background-color: #0055ff;
+}
